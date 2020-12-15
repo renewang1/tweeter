@@ -17,6 +17,8 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
+  display: flex;
+  flex-direction: column;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -28,4 +30,38 @@ body {
  nav {
    font-family: 'Bungee', sans-serif;
    font-size: 36px;
+ }
+
+ main {
+   width: 90%;
+   display: flex;
+   align-self: center;
+   justify-content: center;
+   background-color: #f4f1ec;
+ }
+
+.new-tweet {
+  width: 100%;
+}
+
+#tweet-text {
+  background-color: #f4f1ec;
+  border-bottom: 5px solid black;
+}
+
+ form {
+   display: flex;
+   flex-direction: column;
+   background-attachment: fix;
+ }
+
+ .button-counter {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ button {
+  background-color: #4056A1;
+  color: white;
+  font-family: 'Bungee', sans-serif
  }
