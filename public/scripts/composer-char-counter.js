@@ -1,6 +1,5 @@
 $(document).ready(function() {
   // --- our code goes here ---
-  console.log('hello there')
   $('#tweet-text').on('input', function () {
     // let counterValue = $(this).siblings().children('.counter').get(0).value - 1;
     // console.log(counterValue)
