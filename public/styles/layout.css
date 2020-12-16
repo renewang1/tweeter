@@ -23,6 +23,10 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+body > header {
+  margin-top: 120px;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -39,6 +43,7 @@ body {
    align-self: center;
    justify-content: center;
    background-color: #f4f1ec;
+   top: 500px;
  }
 
 .new-tweet {
