@@ -66,3 +66,50 @@ body {
   color: white;
   font-family: 'Bungee', sans-serif
  }
+
+.tweet-container {
+  display: flex;
+  height: 200px;
+  padding: 10px;
+  margin-top: 50px;
+  border: solid;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f4f1ec;
+}
+
+.tweet-container:hover {
+  box-shadow: 10px 10px;
+}
+
+.tweet-container > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tweet-container > header > div {
+  display: flex;
+  align-items: center;
+}
+
+#sign {
+  color: blue;
+  display: none;
+}
+
+.tweet-container > header > div > img {
+  padding-right: 10px;
+}
+
+.tweet-container > div {
+  padding-left: 100px;
+  padding-bottom: 20px;
+  border-bottom: 5px solid black;
+}
+
+.tweet-container > footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
