@@ -31,30 +31,30 @@ body > header {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- nav {
-   font-family: 'Bungee', sans-serif;
-   font-size: 36px;
- }
+nav {
+  font-family: 'Bungee', sans-serif;
+  font-size: 36px;
+}
 
- #error-message {
-   display: none;
-   margin-top: 20px;
-   height: 60px;
-   text-align: center;
-   line-height: 50px;
-   border-style: solid;
-   color: red;
- }
+#error-message {
+  display: none;
+  margin-top: 20px;
+  height: 60px;
+  text-align: center;
+  line-height: 50px;
+  border-style: solid;
+  color: red;
+}
 
- main {
-   width: 90%;
-   display: flex;
-   flex-direction: column;
-   align-self: center;
-   justify-content: center;
-   background-color: #f4f1ec;
-   top: 500px;
- }
+main {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  background-color: #f4f1ec;
+  top: 500px;
+}
 
 .new-tweet {
   width: 100%;
@@ -65,22 +65,22 @@ body > header {
   border-bottom: 5px solid black;
 }
 
- form {
+form {
    display: flex;
    flex-direction: column;
    background-attachment: fix;
- }
+}
 
- .button-counter {
-   display: flex;
-   justify-content: space-between;
- }
+.button-counter {
+  display: flex;
+  justify-content: space-between;
+}
 
- button {
-  background-color: #4056A1;
-  color: white;
-  font-family: 'Bungee', sans-serif
- }
+button {
+background-color: #4056A1;
+color: white;
+font-family: 'Bungee', sans-serif
+}
 
 .tweet-container {
   display: flex;
@@ -127,4 +127,43 @@ body > header {
   display: flex;
   justify-content: space-between;
   font-size: 16px;
+}
+
+/*Tablet styles*/
+@media only screen and (min-width: 768px) {
+  body {
+    display:flex;
+    flex-direction: column;
+  }
+
+  #profile {
+    width: 100%;
+  }
+
+}
+
+/*Desktop styles*/
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  nav {
+    margin-bottom: 20px;
+  }
+
+  #profile {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 160px;
+    width: 40vw;
+  }
+
+  main {
+    width: 70%;
+    margin-top: 120px;
+  }
+
+  
 }
