@@ -15,6 +15,7 @@ $(document).ready(function() {
 
   $(document).on('click', "#compose-button", function() {
     $("#tweet-form").toggle("slow");
+    $("#tweet-text").focus();
   })
 
   $("#tweet-form").on("submit", function(event) {
