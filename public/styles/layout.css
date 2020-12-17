@@ -113,6 +113,10 @@ font-family: 'Bungee', sans-serif
   align-items: center;
 }
 
+.images {
+  display:none;
+}
+
 .sign {
   color: blue;
   display: none;
