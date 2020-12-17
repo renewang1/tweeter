@@ -5,12 +5,12 @@
  */
 
 $(document).ready(function() {
-  $(".tweets-container").on('mouseover', function() {
-    $('#sign').show();
+  $(document).on('mouseover', ".tweet-container", function() {
+    $(this).find(".sign").show();
   })
 
-  $(".tweets-container").on('mouseout', function() {
-    $('#sign').hide();
+  $(document).on('mouseout', ".tweet-container", function() {
+    $(this).find(".sign").hide();
   })
 
   $("#tweet-form").on("submit", function(event) {
@@ -33,6 +33,7 @@ $(document).ready(function() {
     $.ajax("http://localhost:8080/tweets", { method: 'GET' })
     .done(function(data) {
       renderTweets(data)
+      $(".sign").hide();
     })
   }
 
@@ -78,7 +79,7 @@ const createTweetElement = function (tweet) {
           <img src=${escape(tweet.user.avatars)}>
           ${escape(tweet.user.name)}
         </div>
-        <div id="sign">
+        <div class="sign">
           ${escape(tweet.user.handle)}
         </div>
       </header>
