@@ -27,7 +27,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <button type="button">Compose Tweet</button>
+      <button id="compose-button" type="button">Compose Tweet</button>
     </nav>
     <header id="profile">
       <div>
@@ -44,7 +44,6 @@
     <main class="container">
       <section class="new-tweet">
         <div id="error-message"></div>
-        <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets" id="tweet-form">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
