@@ -91,7 +91,7 @@ const createTweetElement = function (tweet) {
         ${escape(tweet.content.text)}
       </div>
       <footer>
-        ${escape(tweet.created_at)}
+        ${escape(moment(tweet.created_at).toNow(true))} ago
         <div>
           <img src="/images/flags.png">
           <img src="/images/retweet.png">
