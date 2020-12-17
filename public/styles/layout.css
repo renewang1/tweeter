@@ -117,7 +117,6 @@ font-family: 'Bungee', sans-serif
 
 .sign {
   color: blue;
-  display: none;
 }
 
 .tweet-container > header > div > img {
@@ -152,6 +151,11 @@ font-family: 'Bungee', sans-serif
 /*Desktop styles*/
 @media only screen and (min-width: 1024px) {
 
+  body {
+    display:flex;
+    flex-direction: row;
+  }
+
   nav {
     margin-bottom: 20px;
   }
@@ -164,8 +168,8 @@ font-family: 'Bungee', sans-serif
   }
 
   main {
-    display:flex;
-    flex-direction: row;
+    /* display:flex;
+    flex-direction: row; */
     width: 70%;
     margin-top: 120px;
   }

@@ -6,12 +6,10 @@
 
 $(document).ready(function() {
   $(document).on('mouseover', ".tweet-container", function() {
-    $(this).find(".sign").show();
     $(this).find(".images").show();
   })
 
   $(document).on('mouseout', ".tweet-container", function() {
-    $(this).find(".sign").hide();
     $(this).find(".images").hide();
   })
 
@@ -44,7 +42,6 @@ $(document).ready(function() {
     $.ajax("http://localhost:8080/tweets", { method: 'GET' })
     .done(function(data) {
       renderTweets(data)
-      $(".sign").hide();
     })
   }
 
