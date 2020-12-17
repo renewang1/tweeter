@@ -7,10 +7,12 @@
 $(document).ready(function() {
   $(document).on('mouseover', ".tweet-container", function() {
     $(this).find(".sign").show();
+    $(this).find(".images").show();
   })
 
   $(document).on('mouseout', ".tweet-container", function() {
     $(this).find(".sign").hide();
+    $(this).find(".images").hide();
   })
 
   $(document).on('click', "#compose-button", function() {
@@ -72,7 +74,7 @@ const createTweetElement = function (tweet) {
       </div>
       <footer>
         ${escape(moment(tweet.created_at).toNow(true))} ago
-        <div>
+        <div class="images">
           <img src="/images/flags.png">
           <img src="/images/retweet.png">
           <img src="/images/like.png">
