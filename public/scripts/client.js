@@ -5,11 +5,11 @@
  */
 
 $(document).ready(function() {
-  $(".tweet-container").on('mouseover', function() {
+  $(".tweets-container").on('mouseover', function() {
     $('#sign').show();
   })
 
-  $(".tweet-container").on('mouseout', function() {
+  $(".tweets-container").on('mouseout', function() {
     $('#sign').hide();
   })
 
@@ -64,23 +64,29 @@ $(document).ready(function() {
 //   }
 // ]
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 const createTweetElement = function (tweet) {
   const $tweet = $(`
     <article class="tweet-container">
       <header>
         <div>
-          <img src=${tweet.user.avatars}>
-          ${tweet.user.name}
+          <img src=${escape(tweet.user.avatars)}>
+          ${escape(tweet.user.name)}
         </div>
         <div id="sign">
-          ${tweet.user.handle}
+          ${escape(tweet.user.handle)}
         </div>
       </header>
       <div>
-        ${tweet.content.text}
+        ${escape(tweet.content.text)}
       </div>
       <footer>
-        ${tweet.created_at}
+        ${escape(tweet.created_at)}
         <div>
           <img src="/images/flags.png">
           <img src="/images/retweet.png">
@@ -92,9 +98,9 @@ const createTweetElement = function (tweet) {
 }
 
 const renderTweets = function(data) {
-  $('.container').empty();
+  $('.tweets-container').empty();
   for (let tweet of data) {
     let $tweet = createTweetElement(tweet);
-    $('.container').append($tweet);
+    $('.tweets-container').prepend($tweet);
   }
 }
