@@ -98,7 +98,7 @@ body > header {
   align-items: center;
 }
 
-#sign {
+.sign {
   color: blue;
   display: none;
 }
