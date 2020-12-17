@@ -65,10 +65,15 @@ main {
   border-bottom: 5px solid black;
 }
 
+#tweet-form {
+  display: none;
+}
+
 form {
-   display: flex;
-   flex-direction: column;
-   background-attachment: fix;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  background-attachment: fix;
 }
 
 .button-counter {
