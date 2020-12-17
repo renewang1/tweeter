@@ -1,8 +1,30 @@
-.go-to-top-button {
-  display: flex;
+.go-to-top-button > button{
+  display: none;
   position: fixed;
-  right: 0;
-  width: 10%;
-  bottom: 0;
-  border-style: none
+  right: 15px;
+  width: 65px;
+  z-index: 99;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  bottom: 2px;
 }
+/* nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-family: 'Bungee', sans-serif;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+}
+
+nav > button {
+  margin-top: 20px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+} */
