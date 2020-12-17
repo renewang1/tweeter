@@ -15,11 +15,18 @@ $(document).ready(function() {
 
   $("#tweet-form").on("submit", function(event) {
     event.preventDefault();
+    const textBox = $("#tweet-text").val();
+    console.log(textBox)
     const content = $("#tweet-form").serialize();
-    $("#tweet-text").empty();
-    $.post("http://localhost:8080/tweets", content, function(response) {
-      console.log('success')
-    })
+    if (!textBox || textBox.length > 140 || textBox.length <= 0) {
+      alert("Error");
+    } else {
+      $.post("http://localhost:8080/tweets", content, function(response) {
+        console.log('success');
+        $("#tweet-text").empty();
+        loadTweets();
+      })
+    }
   })
 
   const loadTweets = function () {
@@ -59,10 +66,10 @@ $(document).ready(function() {
 
 const createTweetElement = function (tweet) {
   const $tweet = $(`
-    <article class="tweet">
+    <article class="tweet-container">
       <header>
         <div>
-          ${tweet.user.avatars}
+          <img src=${tweet.user.avatars}>
           ${tweet.user.name}
         </div>
         <div id="sign">
@@ -74,15 +81,20 @@ const createTweetElement = function (tweet) {
       </div>
       <footer>
         ${tweet.created_at}
+        <div>
+          <img src="/images/flags.png">
+          <img src="/images/retweet.png">
+          <img src="/images/like.png">
+        </div>
       </footer>
     </article>`);
   return $tweet;
 }
 
 const renderTweets = function(data) {
-  $('#tweets-container').empty();
+  $('.container').empty();
   for (let tweet of data) {
     let $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet);
+    $('.container').append($tweet);
   }
 }
