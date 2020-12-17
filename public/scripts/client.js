@@ -16,11 +16,15 @@ $(document).ready(function() {
   $("#tweet-form").on("submit", function(event) {
     event.preventDefault();
     const textBox = $("#tweet-text").val();
-    console.log(textBox)
     const content = $("#tweet-form").serialize();
-    if (!textBox || textBox.length > 140 || textBox.length <= 0) {
-      alert("Error");
+    if (textBox.length <= 0) {
+      $("#error-message").html("Error tweet too short!")
+      $("#error-message").show("slow");
+    } else if (textBox.length > 140) {
+      $("#error-message").html("Error tweet too long!")
+      $("#error-message").show("slow");
     } else {
+      $("#error-message").hide("slow");
       $.post("http://localhost:8080/tweets", content, function(response) {
         console.log('success');
         $("#tweet-text").empty();
