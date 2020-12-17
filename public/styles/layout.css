@@ -36,6 +36,11 @@ body > header {
    font-size: 36px;
  }
 
+ #error-message {
+   display: none;
+   color: red;
+ }
+
  main {
    width: 90%;
    display: flex;
