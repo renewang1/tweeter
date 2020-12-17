@@ -13,6 +13,10 @@ $(document).ready(function() {
     $(this).find(".sign").hide();
   })
 
+  $(document).on('click', "#compose-button", function() {
+    $("#tweet-form").toggle("slow");
+  })
+
   $("#tweet-form").on("submit", function(event) {
     event.preventDefault();
     const textBox = $("#tweet-text").val();
