@@ -38,6 +38,11 @@ body > header {
 
  #error-message {
    display: none;
+   margin-top: 20px;
+   height: 60px;
+   text-align: center;
+   line-height: 50px;
+   border-style: solid;
    color: red;
  }
 
