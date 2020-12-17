@@ -1,0 +1,8 @@
+.go-to-top-button {
+  display: flex;
+  position: fixed;
+  right: 0;
+  width: 10%;
+  bottom: 0;
+  border-style: none
+}
