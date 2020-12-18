@@ -18,6 +18,18 @@ $(document).ready(function() {
     $("#tweet-text").focus();
   })
 
+  $(window).scroll(function() {
+    $(".go-to-top-button").children().show();
+  })
+
+  $(document).on('click', ".go-to-top-button", function() {
+    $("#tweet-form").show();
+    $(window).scrollTop(0);
+    setTimeout(function() {
+      $(".go-to-top-button").children().hide();
+    }, 10)
+  })
+
   $("#tweet-form").on("submit", function(event) {
     event.preventDefault();
     const textBox = $("#tweet-text").val();
