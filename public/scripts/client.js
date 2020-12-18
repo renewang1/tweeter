@@ -5,23 +5,27 @@
  */
 
 $(document).ready(function() {
+
+  //Mouseover/mouseout event handler to show/hide twitter 'buttons'
   $(document).on('mouseover', ".tweet-container", function() {
     $(this).find(".images").show();
   })
-
   $(document).on('mouseout', ".tweet-container", function() {
     $(this).find(".images").hide();
   })
 
+  //On click toggle of tweet form and focus if form is showing
   $(document).on('click', "#compose-button", function() {
     $("#tweet-form").toggle("slow");
     $("#tweet-text").focus();
   })
 
+  //On scroll function to show go to top button
   $(window).scroll(function() {
     $(".go-to-top-button").children().show();
   })
 
+  //Functionality for go to top button, need setTimeout as without it, on scroll event happens and button is not hidden
   $(document).on('click', ".go-to-top-button", function() {
     $("#tweet-form").show();
     $(window).scrollTop(0);
@@ -30,6 +34,7 @@ $(document).ready(function() {
     }, 10)
   })
 
+  //On submit event to intercept form submission, validate text in tweet-text, and send post request using AJAX, or error otherwise
   $("#tweet-form").on("submit", function(event) {
     event.preventDefault();
     const textBox = $("#tweet-text").val();
@@ -93,6 +98,7 @@ const createTweetElement = function (tweet) {
   return $tweet;
 }
 
+//Function that emptys the tweets container and prepends tweet entries in database
 const renderTweets = function(data) {
   $('.tweets-container').empty();
   for (let tweet of data) {
