@@ -19,6 +19,8 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  display:flex;
+  flex-direction: column;
 }
 
 body > header {
@@ -135,18 +137,15 @@ button {
   font-size: 16px;
 }
 
-/*Tablet styles*/
-@media only screen and (min-width: 768px) {
-  body {
-    display:flex;
-    flex-direction: column;
-  }
-
-  #profile {
-    width: 100%;
-  }
-
+#compose-button {
+  font-size: 16px;
 }
+
+#profile {
+  width: 100%;
+}
+
+/* } */
 
 /*Desktop styles*/
 @media only screen and (min-width: 1024px) {
