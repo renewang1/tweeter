@@ -96,6 +96,8 @@ button {
   flex-direction: column;
   justify-content: space-between;
   background-color: #f4f1ec;
+  word-wrap: break-word;
+  max-width: 100rem;
 }
 
 .tweet-container:hover {
@@ -126,7 +128,6 @@ button {
 }
 
 .tweet-container > div {
-  padding-left: 100px;
   padding-bottom: 20px;
   border-bottom: 5px solid black;
 }
