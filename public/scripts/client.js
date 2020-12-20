@@ -48,7 +48,9 @@ $(document).ready(function() {
     } else {
       $("#error-message").hide("slow");
       $.post("http://localhost:8080/tweets", content, function() {
+        console.log('posted')
         $("#tweet-text").val("");
+        $("#counter").text("140");
         loadTweets();
       });
     }
